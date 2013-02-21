@@ -19,7 +19,7 @@ class TowaryModel extends DefaultTableModel
             case 3: return t.getSWW();
             case 4: return t.getVAT();
         }
-        return new String("brak wartosci w modelu?");
+        return new String("Brak warto\u015Bci w modelu?");
     }
     
     public void setValueAt(Object aValue, int rowIndex, int columnIndex)

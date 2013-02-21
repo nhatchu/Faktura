@@ -38,7 +38,7 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
 
 	EntryPropPage(Frame f, boolean b)
 	{
-		super(f, "Dane towaru / us³ugi", b, new Rectangle(100, 200, 750, 150));
+		super(f, "Dane towaru / us\u0142ugi", b, new Rectangle(100, 200, 750, 150));
                 setResizable(false);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                 _dlg = new BazaTowarowDlg(f, true, this);
@@ -52,9 +52,9 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
 		Tcena.addActionListener(new nextAL(Tcena));
 		Tsww.addActionListener(new nextAL(Tsww));
 		
-		cp.add(new JLabel("Nazwa towaru / us³ugi"));
+		cp.add(new JLabel("Nazwa towaru / us\u0142ugi"));
 		cp.add(Tnazwa);
-		cp.add(new JLabel("Iloœæ"));
+		cp.add(new JLabel("Ilo\u015B\u0107"));
 		cp.add(Tilosc);
 		cp.add(new JLabel("Jednostka"));
 		Tjednostka.setEditable(true);
@@ -98,7 +98,7 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
                     }
                 });
                 _Menu.add(mi);
-                mi = new JMenuItem("Baza towarów...");
+                mi = new JMenuItem("Baza towar\u00F3w...");
                 mi.addActionListener(new ActionListener()
                 {
                     public void actionPerformed(ActionEvent e)

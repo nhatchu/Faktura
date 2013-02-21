@@ -84,9 +84,9 @@ class PrintCreator extends AbstractPrintCreator
 
 
 		g.setFont(newRomanSmall);
-		g.drawString("Imi\u0119 i nazwisko osoby", 117, maxYVisible - 80);
+		g.drawString("Imi\u015B i nazwisko osoby", 117, maxYVisible - 80);
 		g.drawString("upowa\u017Cnionej do wystawienia faktury VAT", 80, maxYVisible - 70);
-		g.drawString("Imi\u0119 i nazwisko osoby", maxXVisible - 115, maxYVisible - 80);
+		g.drawString("Imi\u015B i nazwisko osoby", maxXVisible - 115, maxYVisible - 80);
 		g.drawString("upowa\u017Cnionej do odbioru faktury VAT", maxXVisible - 145, maxYVisible - 70);
 		g.setFont(newRomanNormal);
 		if (dw != null)
@@ -531,7 +531,7 @@ class PrintCreator extends AbstractPrintCreator
 		DaneWystawiajacego dw = m_fd.getDaneWystawiajacego();
 		TableY += 50;
 		g.setFont(newRomanNormal);
-		String s = new String("P\u0142atno\u015B\u0107 : ");
+		String s = new String("P\u0142atno\u015B\u0107: ");
 		s += platn;
 		if (platn.substring(0,7).compareToIgnoreCase("przelew") == 0)
 		{
@@ -539,7 +539,7 @@ class PrintCreator extends AbstractPrintCreator
 			s += dw.getKonto();
 		}
 		g.drawString(s, 80, TableY);
-		s = "Termin p\u0142atno\u015Bci : ";
+		s = "Termin p\u0142atno\u015Bci: ";
 		s += termin;
 		g.drawString(s, 80, TableY + 15);
 	}

@@ -19,7 +19,7 @@ public abstract class AbstractPrintCreator implements Printable
             } 
 			catch (Exception ex) 
 			{
-				JOptionPane.showMessageDialog(null, "B³¹d drukowania", ex.toString(), JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "B\u0142\u0105d drukowania", ex.toString(), JOptionPane.ERROR_MESSAGE);
             }
         }
 	}

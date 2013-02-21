@@ -162,7 +162,7 @@ class KlientSearchDialog extends ResizableDialogBase
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Nie znaleziono klienta spe³niaj¹cego warunki wyszukiwania", "Nie znaleziono", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Nie znaleziono klienta spe\u0142niaj\u0105cego warunki wyszukiwania", "Nie znaleziono", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     /** Closes the dialog */

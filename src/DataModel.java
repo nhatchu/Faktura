@@ -109,8 +109,8 @@ class DataModel extends AbstractTableModel
 		fireTableChanged(e);
 	}
 	
-	public static final String[] ColumnsTitles = {"Lp", "Nazwa", "Iloœæ", "j.m", 
-		"Cena netto", "Wart. netto", "PKWiU", "VAT", "VAT(z³)", "Wart. brutto"};
+	public static final String[] ColumnsTitles = {"Lp", "Nazwa", "Ilo\u015B\u0107", "j.m", 
+		"Cena netto", "Wart. netto", "PKWiU", "VAT", "VAT(z\u0142)", "Wart. brutto"};
 
 	ArrayList data = new ArrayList();
 }

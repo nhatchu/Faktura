@@ -94,7 +94,7 @@ public class MainTab extends JPanel implements IKlientHolder
                     }
                 });
             _BazaMenu.add(mi);
-            mi = new JMenuItem("Baza klientów...");
+            mi = new JMenuItem("Baza klient\u00F3w...");
             mi.addActionListener(new ActionListener()
             {
                 public void actionPerformed(ActionEvent e)
@@ -146,7 +146,7 @@ public class MainTab extends JPanel implements IKlientHolder
 		bv4.add(Box.createHorizontalStrut(10));
 		bv4.add(DataWyst);
 		bv4.add(Box.createHorizontalStrut(10));
-		bv4.add(new JLabel("Data sprzeda¿y"));
+		bv4.add(new JLabel("Data sprzeda\u017Cy"));
 		bv4.add(Box.createHorizontalStrut(10));
 		DataSprze.addFocusListener(new dataFL());
 		bv4.add(DataSprze);
@@ -156,18 +156,18 @@ public class MainTab extends JPanel implements IKlientHolder
 		MiejsceWystawienia.setMinimumSize(new Dimension(400, 21));
 		bv5.add(MiejsceWystawienia);
 		bv5.add(Box.createHorizontalStrut(10));
-		bv5.add(new JLabel("Sposób zap³aty"));
+		bv5.add(new JLabel("Spos\u00F3b zap\u0142aty"));
 		bv5.add(Box.createHorizontalStrut(10));
-		SposZapl.addItem("gotówka");
+		SposZapl.addItem("got\u00F3wka");
 		SposZapl.addItem("przelew");
 		SposZapl.setEditable(true);
 		SposZapl.setMaximumSize(new Dimension(300, 22));
 		bv5.add(SposZapl);
-		bv6.add(new JLabel("Termin p³atnoœci"));
+		bv6.add(new JLabel("Termin p\u0142atno\u015Bci"));
 		bv6.add(Box.createHorizontalStrut(10));
 		bv6.add(TerminPlatn);
 		bv6.add(Box.createHorizontalStrut(20));
-		bv6.add(new JLabel("Odbieraj¹cy"));
+		bv6.add(new JLabel("Odbieraj\u0105cy"));
 		bv6.add(Box.createHorizontalStrut(10));
 		bv6.add(Odbierajacy);
 		bv6.add(Box.createHorizontalStrut(20));
@@ -181,7 +181,7 @@ public class MainTab extends JPanel implements IKlientHolder
 		loa.setSelectionModel(dlsm);
 		loa.addMouseListener(new tableML());
 		JScrollPane scrollPane = new JScrollPane(loa);
-		bv7.add(new JLabel("Lista towarów do umieszczenia na fakturze"));
+		bv7.add(new JLabel("Lista towar\u00F3w do umieszczenia na fakturze"));
 		scrollPane.setPreferredSize(new Dimension(750, 130));
 		bv8.add(scrollPane);
 

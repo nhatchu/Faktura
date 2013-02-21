@@ -62,7 +62,7 @@ class DBManager
 	}
 	catch(Exception ex)
 	{
-            JOptionPane.showMessageDialog(null, "Nie mo¿na zapisaæ danych klientów", "B³¹d zapisu", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Nie moÃ¸na zapisa\u0107 danych klient\u00F3w", "B\u0142\u0105d zapisu", JOptionPane.ERROR_MESSAGE);
             System.out.println(ex.getMessage());
         }
         try
@@ -73,7 +73,7 @@ class DBManager
 	}
 	catch(Exception ex)
 	{
-            JOptionPane.showMessageDialog(null, "Nie mo¿na zapisaæ danych towarów", "B³¹d zapisu", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Nie moÃ¸na zapisa\u0107 danych towar\u00F3w", "B\u0142\u0105d zapisu", JOptionPane.ERROR_MESSAGE);
             System.out.println(ex.getMessage());
         }
     }
@@ -111,17 +111,17 @@ class DBManager
 	}
 	catch(FileNotFoundException e)
 	{
-            System.out.println("Brak pliku z danymi klientow");
+            System.out.println("Brak pliku z danymi klient\u00F3w");
             _KlienciLst = new ArrayList();
 	}
 	catch(IOException e)
 	{
-            System.out.println("Blad odczytu pliku z danymi klientow");
+            System.out.println("B\u0142ad odczytu pliku z danymi klient\u00F3w");
             _KlienciLst = new ArrayList();
 	}
 	catch(ClassNotFoundException e)
 	{
-            System.out.println("Bledny format pliku z danymi klientow");
+            System.out.println("B\u0142edny format pliku z danymi klient\u00F3w");
             _KlienciLst = new ArrayList();
 	}
     }

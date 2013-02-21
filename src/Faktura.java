@@ -47,7 +47,7 @@ class Faktura extends JFrame
                     }
                     catch(Exception ex)
                     {
-                    	System.out.println("Nie mozna zapisac pliku z danymi wystawiajacego");
+                    	System.out.println("Nie mo\u017Cna zapisa\u0107 pliku z danymi wystawiaj\u0105cego");
                     }
                     DBManager.getInstance().saveData();
                     System.exit(0);
@@ -81,16 +81,16 @@ class Faktura extends JFrame
 			DaneWyst.setNazwa("Nazwa firmy");
 			DaneWyst.setMiasto("Miasto");
 			DaneWyst.setUlica("Ulica");
-			DaneWyst.setNip("Nip");
+			DaneWyst.setNip("NIP");
 			DaneWyst.setKonto("Konto firmowe");
-			DaneWyst.setWystawiajacy("Nazwisko i imiê wystawiaj¹cego");
+			DaneWyst.setWystawiajacy("Nazwisko i imi\u0119 wystawiaj\u0105cego");
 		}
 		DWTab = new DaneWystTab(DaneWyst);
 
 		jt.addTab("Edycja faktury", mt);
-		jt.addTab("Podgl¹d wydruku", pp);
+		jt.addTab("Podgl\u0105d wydruku", pp);
 		jt.addTab("Faktury wystawione", fw);
-		jt.addTab("Dane wystawiaj¹cego", DWTab);
+		jt.addTab("Dane wystawiaj\u0105cego", DWTab);
 		jt.addTab("O programie", new About());
 		jt.addChangeListener(new tabCL());
 		cp.add(jt);

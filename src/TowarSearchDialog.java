@@ -186,7 +186,7 @@ class TowarSearchDialog extends ResizableDialogBase
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Nie znaleziono towaru / us³ugi spe³niaj¹cej warunki wyszukiwania", "Nie znaleziono", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Nie znaleziono towaru / us\u0142ugi spe\u0142niaj\u0105cej warunki wyszukiwania", "Nie znaleziono", JOptionPane.INFORMATION_MESSAGE);
         }
     }
     

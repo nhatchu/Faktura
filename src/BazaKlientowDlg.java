@@ -131,7 +131,7 @@ class BazaKlientowDlg extends ResizableDialogBase {
         int sel = jTable1.getSelectedRow();
 	if (sel == -1)	return;
         String[] options = { "OK", "Anuluj" };
-	int res = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz skasowaæ wybranego klienta?", "Kasowanie klienta", 
+	int res = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz skasowa\u0107 wybranego klienta?", "Kasowanie klienta", 
 	JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 	if (res != 0)
 	{

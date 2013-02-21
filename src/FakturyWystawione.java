@@ -33,7 +33,7 @@ class FakturyWystawione extends JPanel
 				return;
 			}
 			String[] options = { "OK", "Anuluj" };
-			int res = JOptionPane.showOptionDialog(null, "Skasowaæ " + sel, "Kasowanie faltury", 
+			int res = JOptionPane.showOptionDialog(null, "Skasowa\u0107 " + sel, "Kasowanie faktury", 
 			JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 			if (res != 0)
 			{
@@ -50,7 +50,7 @@ class FakturyWystawione extends JPanel
 			}
 			else
 			{
-				JOptionPane.showMessageDialog(null, "Nie mo¿na skasowaæ pliku faktury", "B³¹d zapisu", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Nie moÃ¸na skasowa\u0107 pliku faktury", "B\u0142\u0105d zapisu", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
@@ -70,11 +70,11 @@ class FakturyWystawione extends JPanel
 				FakturaData fd = (FakturaData)in.readObject();
 				m_f.setData(fd);
 				in.close();
-				JOptionPane.showMessageDialog(null, "Faktura za³adowana", "Wczytano fakturê", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Faktura za\u0142adowana", "Wczytano faktur\u0119", JOptionPane.INFORMATION_MESSAGE);
 			}
 			catch(Exception ex)
 			{
-				JOptionPane.showMessageDialog(null, "B³¹d odczytu pliku faktury", "B³¹d odczytu", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "B\u0142\u0105d odczytu pliku faktury", "B\u0142\u0105d odczytu", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
@@ -152,6 +152,6 @@ class FakturyWystawione extends JPanel
 	private Faktura m_f;
 	private JList FaktFilesList;
 	private JButton jbopen = new JButton("Wczytaj");
-	private JButton jbkasuj = new JButton("Kasuj fakturê");
+	private JButton jbkasuj = new JButton("Kasuj faktur\u0119");
 	private JScrollPane ScrollFiles;
 }

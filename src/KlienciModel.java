@@ -20,7 +20,7 @@ class KlienciModel extends javax.swing.table.DefaultTableModel
             case 2: return k.getUlica();
             case 3: return k.getNIP();
         }
-        return new String("brak wartosci w modelu?");
+        return new String("brak warto\u015Bci w modelu?");
     }
     
     public void setValueAt(Object aValue, int rowIndex, int columnIndex)

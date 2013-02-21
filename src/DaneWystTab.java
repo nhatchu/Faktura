@@ -33,7 +33,7 @@ class DaneWystTab extends JPanel
 		bx.add(ulica);
 		bx.add(Box.createVerticalStrut(20));
 
-		bx.add(new JLabel("Nip"));
+		bx.add(new JLabel("NIP"));
 		bx.add(Box.createVerticalStrut(10));
 		nip.setText(dw.getNip());
 		bx.add(nip);
@@ -45,7 +45,7 @@ class DaneWystTab extends JPanel
 		bx.add(konto);
 		bx.add(Box.createVerticalStrut(20));
 		
-		bx.add(new JLabel("Wystawiaj¹cy"));
+		bx.add(new JLabel("Wystawiaj\u0105cy"));
 		bx.add(Box.createVerticalStrut(10));
 		wystawiajacy.setText(dw.getWystawiajacy());
 		bx.add(wystawiajacy);

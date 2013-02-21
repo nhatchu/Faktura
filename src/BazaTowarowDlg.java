@@ -133,7 +133,7 @@ class BazaTowarowDlg extends ResizableDialogBase {
         int sel = jTable1.getSelectedRow();
 	if (sel == -1)	return;
         String[] options = { "OK", "Anuluj" };
-	int res = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz skasowaæ wybrany towar / us³ugê?", "Kasowanie towaru", 
+	int res = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz skasowa\u0107 wybrany towar / us\u0142ug\u0119?", "Kasowanie towaru", 
 	JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 	if (res != 0)
 	{

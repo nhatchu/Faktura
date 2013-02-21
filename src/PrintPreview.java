@@ -21,7 +21,7 @@ class PrintPreview extends JPanel
 		{
 			try
 			{
-				String nazwa = JOptionPane.showInputDialog(null, "Podaj nazwê pliku", "Zapisywanie faktury", JOptionPane.QUESTION_MESSAGE); 
+				String nazwa = JOptionPane.showInputDialog(null, "Podaj nazw\u015B pliku", "Zapisywanie faktury", JOptionPane.QUESTION_MESSAGE); 
 				if ( (nazwa == null) || (nazwa.length() < 1))
 				{
 					return;
@@ -30,11 +30,11 @@ class PrintPreview extends JPanel
 				ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(nazwa + ".faktura"));
 				out.writeObject(fd);
 				out.close();
-				JOptionPane.showMessageDialog(null, "Faktura zapisana", "Zapisano fakturê", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Faktura zapisana", "Zapisano faktur\u0119", JOptionPane.INFORMATION_MESSAGE);
 			}
 			catch(Exception ex)
 			{
-				JOptionPane.showMessageDialog(null, "Nie mo¿na zapisaæ pliku faktury", "B³¹d zapisu", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Nie moÃ¸na zapisa\u0107 pliku faktury", "B\u0142\u0105d zapisu", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
