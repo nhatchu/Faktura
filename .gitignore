@@ -5,3 +5,7 @@
 **/*.perspectivev*
 project.xcworkspace/
 xcuserdata/
+build
+dw.dat
+Klienci.dat
+Towary.dat
