@@ -6,14 +6,96 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		A3F3DB4016D69DDC009D04C9 /* About.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = About.java; path = ../faktura/src/About.java; sourceTree = "<group>"; };
+		A3F3DB4116D69DDC009D04C9 /* AbstractPrintCreator.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = AbstractPrintCreator.java; path = ../faktura/src/AbstractPrintCreator.java; sourceTree = "<group>"; };
+		A3F3DB4216D69DDC009D04C9 /* BazaKlientowDlg.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = BazaKlientowDlg.java; path = ../faktura/src/BazaKlientowDlg.java; sourceTree = "<group>"; };
+		A3F3DB4316D69DDC009D04C9 /* BazaTowarowDlg.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = BazaTowarowDlg.java; path = ../faktura/src/BazaTowarowDlg.java; sourceTree = "<group>"; };
+		A3F3DB4416D69DDC009D04C9 /* ColumnModel.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ColumnModel.java; path = ../faktura/src/ColumnModel.java; sourceTree = "<group>"; };
+		A3F3DB4516D69DDC009D04C9 /* CopyPasteTextField.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = CopyPasteTextField.java; path = ../faktura/src/CopyPasteTextField.java; sourceTree = "<group>"; };
+		A3F3DB4616D69DDC009D04C9 /* DaneWystawiajacego.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = DaneWystawiajacego.java; path = ../faktura/src/DaneWystawiajacego.java; sourceTree = "<group>"; };
+		A3F3DB4716D69DDC009D04C9 /* DaneWystTab.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = DaneWystTab.java; path = ../faktura/src/DaneWystTab.java; sourceTree = "<group>"; };
+		A3F3DB4816D69DDC009D04C9 /* DataEntry.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = DataEntry.java; path = ../faktura/src/DataEntry.java; sourceTree = "<group>"; };
+		A3F3DB4916D69DDC009D04C9 /* DataModel.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = DataModel.java; path = ../faktura/src/DataModel.java; sourceTree = "<group>"; };
+		A3F3DB4A16D69DDC009D04C9 /* DBManager.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = DBManager.java; path = ../faktura/src/DBManager.java; sourceTree = "<group>"; };
+		A3F3DB4B16D69DDC009D04C9 /* EntryPropPage.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = EntryPropPage.java; path = ../faktura/src/EntryPropPage.java; sourceTree = "<group>"; };
+		A3F3DB4C16D69DDC009D04C9 /* Faktura.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = Faktura.java; path = ../faktura/src/Faktura.java; sourceTree = "<group>"; };
+		A3F3DB4D16D69DDC009D04C9 /* FakturaData.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = FakturaData.java; path = ../faktura/src/FakturaData.java; sourceTree = "<group>"; };
+		A3F3DB4E16D69DDC009D04C9 /* FakturyWystawione.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = FakturyWystawione.java; path = ../faktura/src/FakturyWystawione.java; sourceTree = "<group>"; };
+		A3F3DB4F16D69DDC009D04C9 /* IKlientHolder.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = IKlientHolder.java; path = ../faktura/src/IKlientHolder.java; sourceTree = "<group>"; };
+		A3F3DB5016D69DDC009D04C9 /* ITowarHolder.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ITowarHolder.java; path = ../faktura/src/ITowarHolder.java; sourceTree = "<group>"; };
+		A3F3DB5116D69DDC009D04C9 /* KlienciModel.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = KlienciModel.java; path = ../faktura/src/KlienciModel.java; sourceTree = "<group>"; };
+		A3F3DB5216D69DDC009D04C9 /* Klient.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = Klient.java; path = ../faktura/src/Klient.java; sourceTree = "<group>"; };
+		A3F3DB5316D69DDC009D04C9 /* KlientSearchDialog.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = KlientSearchDialog.java; path = ../faktura/src/KlientSearchDialog.java; sourceTree = "<group>"; };
+		A3F3DB5416D69DDC009D04C9 /* ListOfArts.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ListOfArts.java; path = ../faktura/src/ListOfArts.java; sourceTree = "<group>"; };
+		A3F3DB5516D69DDC009D04C9 /* ListSelListener.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ListSelListener.java; path = ../faktura/src/ListSelListener.java; sourceTree = "<group>"; };
+		A3F3DB5616D69DDC009D04C9 /* MainTab.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = MainTab.java; path = ../faktura/src/MainTab.java; sourceTree = "<group>"; };
+		A3F3DB5716D69DDC009D04C9 /* PrintCreator.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = PrintCreator.java; path = ../faktura/src/PrintCreator.java; sourceTree = "<group>"; };
+		A3F3DB5816D69DDC009D04C9 /* PrintPreview.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = PrintPreview.java; path = ../faktura/src/PrintPreview.java; sourceTree = "<group>"; };
+		A3F3DB5916D69DDC009D04C9 /* PrintProba.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = PrintProba.java; path = ../faktura/src/PrintProba.java; sourceTree = "<group>"; };
+		A3F3DB5A16D69DDC009D04C9 /* ResizableDialogBase.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = ResizableDialogBase.java; path = ../faktura/src/ResizableDialogBase.java; sourceTree = "<group>"; };
+		A3F3DB5B16D69DDC009D04C9 /* Slownie.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = Slownie.java; path = ../faktura/src/Slownie.java; sourceTree = "<group>"; };
+		A3F3DB5C16D69DDC009D04C9 /* Towar.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = Towar.java; path = ../faktura/src/Towar.java; sourceTree = "<group>"; };
+		A3F3DB5D16D69DDC009D04C9 /* TowarSearchDialog.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = TowarSearchDialog.java; path = ../faktura/src/TowarSearchDialog.java; sourceTree = "<group>"; };
+		A3F3DB5E16D69DDC009D04C9 /* TowaryModel.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = TowaryModel.java; path = ../faktura/src/TowaryModel.java; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		A3F3DB2F16D68F06009D04C9 = {
 			isa = PBXGroup;
 			children = (
+				A3F3DB4016D69DDC009D04C9 /* About.java */,
+				A3F3DB4116D69DDC009D04C9 /* AbstractPrintCreator.java */,
+				A3F3DB4216D69DDC009D04C9 /* BazaKlientowDlg.java */,
+				A3F3DB4316D69DDC009D04C9 /* BazaTowarowDlg.java */,
+				A3F3DB4416D69DDC009D04C9 /* ColumnModel.java */,
+				A3F3DB4516D69DDC009D04C9 /* CopyPasteTextField.java */,
+				A3F3DB4616D69DDC009D04C9 /* DaneWystawiajacego.java */,
+				A3F3DB4716D69DDC009D04C9 /* DaneWystTab.java */,
+				A3F3DB4816D69DDC009D04C9 /* DataEntry.java */,
+				A3F3DB4916D69DDC009D04C9 /* DataModel.java */,
+				A3F3DB4A16D69DDC009D04C9 /* DBManager.java */,
+				A3F3DB4B16D69DDC009D04C9 /* EntryPropPage.java */,
+				A3F3DB4C16D69DDC009D04C9 /* Faktura.java */,
+				A3F3DB4D16D69DDC009D04C9 /* FakturaData.java */,
+				A3F3DB4E16D69DDC009D04C9 /* FakturyWystawione.java */,
+				A3F3DB4F16D69DDC009D04C9 /* IKlientHolder.java */,
+				A3F3DB5016D69DDC009D04C9 /* ITowarHolder.java */,
+				A3F3DB5116D69DDC009D04C9 /* KlienciModel.java */,
+				A3F3DB5216D69DDC009D04C9 /* Klient.java */,
+				A3F3DB5316D69DDC009D04C9 /* KlientSearchDialog.java */,
+				A3F3DB5416D69DDC009D04C9 /* ListOfArts.java */,
+				A3F3DB5516D69DDC009D04C9 /* ListSelListener.java */,
+				A3F3DB5616D69DDC009D04C9 /* MainTab.java */,
+				A3F3DB5716D69DDC009D04C9 /* PrintCreator.java */,
+				A3F3DB5816D69DDC009D04C9 /* PrintPreview.java */,
+				A3F3DB5916D69DDC009D04C9 /* PrintProba.java */,
+				A3F3DB5A16D69DDC009D04C9 /* ResizableDialogBase.java */,
+				A3F3DB5B16D69DDC009D04C9 /* Slownie.java */,
+				A3F3DB5C16D69DDC009D04C9 /* Towar.java */,
+				A3F3DB5D16D69DDC009D04C9 /* TowarSearchDialog.java */,
+				A3F3DB5E16D69DDC009D04C9 /* TowaryModel.java */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		A3F3DB3B16D69DB7009D04C9 /* Faktura */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = jar;
+			buildConfigurationList = A3F3DB3E16D69DB7009D04C9 /* Build configuration list for PBXLegacyTarget "Faktura" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/ant;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = Faktura;
+			passBuildSettingsInEnvironment = 1;
+			productName = Faktura;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXProject section */
 		A3F3DB3116D68F06009D04C9 /* Project object */ = {
@@ -32,6 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				A3F3DB3B16D69DB7009D04C9 /* Faktura */,
 			);
 		};
 /* End PBXProject section */
@@ -49,6 +132,65 @@
 			};
 			name = Release;
 		};
+		A3F3DB3C16D69DB7009D04C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A3F3DB3D16D69DB7009D04C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -60,6 +202,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A3F3DB3E16D69DB7009D04C9 /* Build configuration list for PBXLegacyTarget "Faktura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3F3DB3C16D69DB7009D04C9 /* Debug */,
+				A3F3DB3D16D69DB7009D04C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
