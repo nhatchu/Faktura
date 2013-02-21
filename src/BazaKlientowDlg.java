@@ -11,15 +11,15 @@ class BazaKlientowDlg extends ResizableDialogBase {
         initComponents();
         jTable1.setModel(new KlienciModel());
         DefaultListSelectionModel dlsm = new DefaultListSelectionModel();
-	dlsm.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-	dlsm.addListSelectionListener(new ListSelListener(jButton1, jButton2, jTable1));
-	jTable1.setSelectionModel(dlsm);
+        dlsm.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        dlsm.addListSelectionListener(new ListSelListener(jButton1, jButton2, jTable1));
+        jTable1.setSelectionModel(dlsm);
         jButton1.setEnabled(false);
         jButton2.setEnabled(false);
         _Ikh = ikh;
         _KlientSearch = new KlientSearchDialog(parent, true, jTable1);
         restoreDialogPosition();
-   }
+    }
     
     public void klientAdded()
     {
@@ -27,7 +27,7 @@ class BazaKlientowDlg extends ResizableDialogBase {
         AbstractTableModel m = (AbstractTableModel)jTable1.getModel();
         m.fireTableChanged(new TableModelEvent(jTable1.getModel(), row, row, TableModelEvent.ALL_COLUMNS, TableModelEvent.INSERT));
     }
-   
+    
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -36,45 +36,45 @@ class BazaKlientowDlg extends ResizableDialogBase {
     private void initComponents()//GEN-BEGIN:initComponents
     {
         java.awt.GridBagConstraints gridBagConstraints;
-
+        
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-
+        
         getContentPane().setLayout(new java.awt.GridBagLayout());
-
+        
         setTitle("Klienci");
         setLocationRelativeTo(null);
         addWindowListener(new java.awt.event.WindowAdapter()
-        {
+                          {
             public void windowClosing(java.awt.event.WindowEvent evt)
             {
                 closeDialog(evt);
             }
         });
-
+        
         jScrollPane1.setMinimumSize(new java.awt.Dimension(300, 200));
         jScrollPane1.setPreferredSize(new java.awt.Dimension(450, 400));
         jScrollPane1.setViewportView(jTable1);
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 10.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jScrollPane1, gridBagConstraints);
-
+        
         jButton1.setText("Pobierz z bazy");
         jButton1.addActionListener(new java.awt.event.ActionListener()
-        {
+                                   {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jButton1ActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -83,16 +83,16 @@ class BazaKlientowDlg extends ResizableDialogBase {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         getContentPane().add(jButton1, gridBagConstraints);
-
+        
         jButton2.setText("Kasuj klienta");
         jButton2.addActionListener(new java.awt.event.ActionListener()
-        {
+                                   {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jButton2ActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
@@ -101,16 +101,16 @@ class BazaKlientowDlg extends ResizableDialogBase {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         getContentPane().add(jButton2, gridBagConstraints);
-
+        
         jButton3.setText("Szukaj klienta");
         jButton3.addActionListener(new java.awt.event.ActionListener()
-        {
+                                   {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jButton3ActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -119,38 +119,38 @@ class BazaKlientowDlg extends ResizableDialogBase {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         getContentPane().add(jButton3, gridBagConstraints);
-
+        
     }//GEN-END:initComponents
-
+    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton3ActionPerformed
     {//GEN-HEADEREND:event_jButton3ActionPerformed
         _KlientSearch.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
-
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int sel = jTable1.getSelectedRow();
-	if (sel == -1)	return;
+        if (sel == -1)	return;
         String[] options = { "OK", "Anuluj" };
-	int res = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz skasowa\u0107 wybranego klienta?", "Kasowanie klienta", 
-	JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
-	if (res != 0)
-	{
-		return;
-	}
+        int res = JOptionPane.showOptionDialog(null, "Czy na pewno chcesz skasowa\u0107 wybranego klienta?", "Kasowanie klienta",
+                                               JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+        if (res != 0)
+        {
+            return;
+        }
         KlienciModel klm = (KlienciModel)jTable1.getModel();
         klm.removeRow(sel);
         
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int sel = jTable1.getSelectedRow();
-	if (sel == -1)	return;
-	KlienciModel klm = (KlienciModel)jTable1.getModel();
-	_Ikh.setKlientNazwa((String)klm.getValueAt(sel, 0));
+        if (sel == -1)	return;
+        KlienciModel klm = (KlienciModel)jTable1.getModel();
+        _Ikh.setKlientNazwa((String)klm.getValueAt(sel, 0));
         _Ikh.setKlientMiasto((String)klm.getValueAt(sel, 1));
         _Ikh.setKlientUlica((String)klm.getValueAt(sel, 2));
         _Ikh.setKlientNIP((String)klm.getValueAt(sel, 3));
-    
+        
     }//GEN-LAST:event_jButton1ActionPerformed
     
     /** Closes the dialog */

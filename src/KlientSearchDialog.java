@@ -25,7 +25,7 @@ class KlientSearchDialog extends ResizableDialogBase
     private void initComponents()//GEN-BEGIN:initComponents
     {
         java.awt.GridBagConstraints gridBagConstraints;
-
+        
         jbOK = new javax.swing.JButton();
         jbCancel = new javax.swing.JButton();
         _Nip = new javax.swing.JTextField();
@@ -34,27 +34,27 @@ class KlientSearchDialog extends ResizableDialogBase
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-
+        
         getContentPane().setLayout(new java.awt.GridBagLayout());
-
+        
         setTitle("Szukanie klienta");
         addWindowListener(new java.awt.event.WindowAdapter()
-        {
+                          {
             public void windowClosing(java.awt.event.WindowEvent evt)
             {
                 closeDialog(evt);
             }
         });
-
+        
         jbOK.setText("OK");
         jbOK.addActionListener(new java.awt.event.ActionListener()
-        {
+                               {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jbOKActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
@@ -62,16 +62,16 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         getContentPane().add(jbOK, gridBagConstraints);
-
+        
         jbCancel.setText("Zamknij");
         jbCancel.addActionListener(new java.awt.event.ActionListener()
-        {
+                                   {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jbCancelActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -79,7 +79,7 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         getContentPane().add(jbCancel, gridBagConstraints);
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -88,7 +88,7 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(_Nip, gridBagConstraints);
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -97,7 +97,7 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(_Nazwa, gridBagConstraints);
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -106,7 +106,7 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(_Adres, gridBagConstraints);
-
+        
         jLabel1.setText("NIP");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -115,7 +115,7 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jLabel1, gridBagConstraints);
-
+        
         jLabel2.setText("Nazwa");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -125,7 +125,7 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jLabel2, gridBagConstraints);
-
+        
         jLabel3.setText("Ulica");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -135,22 +135,22 @@ class KlientSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jLabel3, gridBagConstraints);
-
+        
     }//GEN-END:initComponents
-
+    
     private void jbCancelActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jbCancelActionPerformed
     {//GEN-HEADEREND:event_jbCancelActionPerformed
         saveDialogPosition();
         closeDialog(null);
     }//GEN-LAST:event_jbCancelActionPerformed
-
+    
     private void jbOKActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jbOKActionPerformed
     {//GEN-HEADEREND:event_jbOKActionPerformed
-       szukaj();
+        szukaj();
     }//GEN-LAST:event_jbOKActionPerformed
     private void szukaj()
     {
-       int pos = searchForIdx(_Nip.getText(), _Nazwa.getText(), _Adres.getText(), _Table.getSelectedRow());
+        int pos = searchForIdx(_Nip.getText(), _Nazwa.getText(), _Adres.getText(), _Table.getSelectedRow());
         if (pos != -1)
         {
             _Table.setRowSelectionInterval(pos, pos);
@@ -191,7 +191,7 @@ class KlientSearchDialog extends ResizableDialogBase
         }
         return -1;
     }
-        
+    
     private class editAL implements java.awt.event.ActionListener
     {
         public void actionPerformed(java.awt.event.ActionEvent e)

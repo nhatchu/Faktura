@@ -33,7 +33,7 @@ class Klient implements java.io.Serializable
     {
         _Ulica = Ulica;
     }
-
+    
     private String _NIP = new String();
     private String _Nazwa = new String();
     private String _Miasto = new String();

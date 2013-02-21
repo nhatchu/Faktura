@@ -77,7 +77,7 @@ class DataEntry implements Serializable
 	{
 		return WartoscNetto;
 	}
-
+    
 	public void recalculate()
 	{
 		try
@@ -100,7 +100,7 @@ class DataEntry implements Serializable
 		{
 			return ret;
 		}
-
+        
 		int i = d.indexOf(".");
 		if ( (i != -1) && (i < d.length() - 1))
 		{

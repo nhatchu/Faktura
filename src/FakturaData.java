@@ -4,141 +4,141 @@ import java.io.Serializable;
 
 class FakturaData implements Serializable
 {
-	public void setNazwaFirmy(String nazwa) 
+	public void setNazwaFirmy(String nazwa)
 	{
 		NazwaFirmy = nazwa;
 	}
 	
-	public final String getNazwaFirmy() 
+	public final String getNazwaFirmy()
 	{
 		return NazwaFirmy;
 	}
 	
-	public void setAdresFirmyMiasto(String nazwa) 
+	public void setAdresFirmyMiasto(String nazwa)
 	{
 		AdresFirmyMiasto = nazwa;
 	}
 	
-	public final String getAdresFirmyMiasto() 
+	public final String getAdresFirmyMiasto()
 	{
 		return AdresFirmyMiasto;
 	}
 	
-	public void setAdresFirmyUlica(String nazwa) 
+	public void setAdresFirmyUlica(String nazwa)
 	{
 		AdresFirmyUlica = nazwa;
 	}
 	
-	public final String getAdresFirmyUlica() 
+	public final String getAdresFirmyUlica()
 	{
 		return AdresFirmyUlica;
 	}
-
-	public void setNip(String nazwa) 
+    
+	public void setNip(String nazwa)
 	{
 		Nip = nazwa;
 	}
 	
-	public final String getNip() 
+	public final String getNip()
 	{
 		return Nip;
 	}
-		
-	public void setDataWyst(String nazwa) 
+    
+	public void setDataWyst(String nazwa)
 	{
 		DataWyst = nazwa;
 	}
 	
-	public final String getDataWyst() 
+	public final String getDataWyst()
 	{
 		return DataWyst;
 	}
 	
-	public void setDataSprze(String nazwa) 
+	public void setDataSprze(String nazwa)
 	{
 		DataSprze = nazwa;
 	}
-	public final String getDataSprze() 
+	public final String getDataSprze()
 	{
 		return DataSprze;
 	}
-
-	public void setTerminPlatn(String nazwa) 
+    
+	public void setTerminPlatn(String nazwa)
 	{
 		TerminPlatn = nazwa;
 	}
 	
-	public final String getTerminPlatn() 
+	public final String getTerminPlatn()
 	{
 		return TerminPlatn;
 	}
-
-	public void setNumerFakt(final String nazwa) 
+    
+	public void setNumerFakt(final String nazwa)
 	{
 		NumerFakt = nazwa;
 	}
 	
-	public final String getNumerFakt() 
+	public final String getNumerFakt()
 	{
 		return NumerFakt;
 	}
-
-	public void setSposobZapl(final String nazwa) 
+    
+	public void setSposobZapl(final String nazwa)
 	{
 		SposobZapl = nazwa;
 	}
 	
-	public final String getSposobZapl() 
+	public final String getSposobZapl()
 	{
 		return SposobZapl;
 	}
-
-	public void setOdbierajacy(final String nazwa) 
+    
+	public void setOdbierajacy(final String nazwa)
 	{
 		Odbierajacy = nazwa;
 	}
 	
-	public final String getOdbierajacy() 
+	public final String getOdbierajacy()
 	{
 		return Odbierajacy;
 	}
-
-	public void setMiejsceWystawienia(final String nazwa) 
+    
+	public void setMiejsceWystawienia(final String nazwa)
 	{
 		MiejsceWystawienia = nazwa;
 	}
 	
-	public final String getMiejsceWystawienia() 
+	public final String getMiejsceWystawienia()
 	{
 		return MiejsceWystawienia;
 	}
-
-	public void setUwagi(String nazwa) 
+    
+	public void setUwagi(String nazwa)
 	{
 		Uwagi = nazwa;
 	}
 	
-	public final String getUwagi() 
+	public final String getUwagi()
 	{
 		return Uwagi;
 	}
-
-	public void setWpisy(ArrayList arl) 
+    
+	public void setWpisy(ArrayList arl)
 	{
 		wpisy = arl;
 	}
 	
-	public final ArrayList getWpisy() 
+	public final ArrayList getWpisy()
 	{
 		return wpisy;
 	}
-
-	public void setDaneWystawiajacego(DaneWystawiajacego dw) 
+    
+	public void setDaneWystawiajacego(DaneWystawiajacego dw)
 	{
 		DaneW = dw;
 	}
 	
-	public final DaneWystawiajacego getDaneWystawiajacego() 
+	public final DaneWystawiajacego getDaneWystawiajacego()
 	{
 		return DaneW;
 	}

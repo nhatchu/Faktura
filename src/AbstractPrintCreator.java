@@ -11,13 +11,13 @@ public abstract class AbstractPrintCreator implements Printable
 	{
 		PrinterJob printJob = PrinterJob.getPrinterJob();
         printJob.setPrintable(this);
-        if (printJob.printDialog()) 
+        if (printJob.printDialog())
 		{
             try
 			{
                 printJob.print();
-            } 
-			catch (Exception ex) 
+            }
+			catch (Exception ex)
 			{
 				JOptionPane.showMessageDialog(null, "B\u0142\u0105d drukowania", ex.toString(), JOptionPane.ERROR_MESSAGE);
             }
@@ -25,9 +25,9 @@ public abstract class AbstractPrintCreator implements Printable
 	}
 	
 	public final int print(Graphics g, PageFormat pf, int pi)
-                          throws PrinterException 
+    throws PrinterException
 	{
-		if (pi >= 1) 
+		if (pi >= 1)
 		{
 			return Printable.NO_SUCH_PAGE;
 		}

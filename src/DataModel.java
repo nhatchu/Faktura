@@ -6,11 +6,11 @@ import javax.swing.event.*;
 class DataModel extends AbstractTableModel
 {
 	public int getRowCount()
-	{ 
+	{
 		return data.size();
 	}
-	public int getColumnCount() 
-	{ 
+	public int getColumnCount()
+	{
 		return ColumnsTitles.length;
 	}
 	public Object getValueAt(int row, int column)
@@ -104,13 +104,13 @@ class DataModel extends AbstractTableModel
 	
 	public void setData(ArrayList al)
 	{
-		data = al;	
+		data = al;
 		TableModelEvent e = new TableModelEvent(this);
 		fireTableChanged(e);
 	}
 	
-	public static final String[] ColumnsTitles = {"Lp", "Nazwa", "Ilo\u015B\u0107", "j.m", 
-		"Cena netto", "Wart. netto", "PKWiU", "VAT", "VAT(z\u0142)", "Wart. brutto"};
-
+	public static final String[] ColumnsTitles = {"Lp", "Nazwa", "Ilo\u015B\u0107", "j.m",
+    "Cena netto", "Wart. netto", "PKWiU", "VAT", "VAT(z\u0142)", "Wart. brutto"};
+    
 	ArrayList data = new ArrayList();
 }

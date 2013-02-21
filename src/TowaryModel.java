@@ -2,7 +2,7 @@ import javax.swing.table.*;
 import javax.swing.event.TableModelEvent;
 class TowaryModel extends DefaultTableModel
 {
-     /** Creates a new instance of KlienciModel */
+    /** Creates a new instance of KlienciModel */
     public TowaryModel()
     {
         super(new String[] { "Nazwa", "Cena", "Jednostka", "PKOB", "VAT"}, 0);
@@ -13,7 +13,7 @@ class TowaryModel extends DefaultTableModel
         Towar t = (Towar)DBManager.getInstance().getTowary().get(rowIndex);
         switch (columnIndex)
         {
-            case 0: return t.getNazwa(); 
+            case 0: return t.getNazwa();
             case 1: return t.getCena();
             case 2: return t.getJednostka();
             case 3: return t.getSWW();

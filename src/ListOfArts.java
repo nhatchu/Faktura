@@ -2,10 +2,10 @@
 import javax.swing.*;
 import javax.swing.table.*;
 
-class ListOfArts extends JTable 
+class ListOfArts extends JTable
 {
 	ListOfArts()
 	{
-		super( new DataModel(), new ColumnModel());	
+		super( new DataModel(), new ColumnModel());
 	}
 }

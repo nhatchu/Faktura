@@ -17,7 +17,7 @@ public class MainTab extends JPanel implements IKlientHolder
 	
 	class dodajAL implements ActionListener
 	{
-            public void actionPerformed(ActionEvent e)
+        public void actionPerformed(ActionEvent e)
 		{
 			_epp.sw();
 			DataEntry dat = _epp.getData();
@@ -40,7 +40,7 @@ public class MainTab extends JPanel implements IKlientHolder
 	
 	class  tableML extends MouseAdapter
 	{
-            public void mouseClicked(MouseEvent e)
+        public void mouseClicked(MouseEvent e)
 		{
 			int sel = loa.getSelectedRow();
 			if (sel == -1)
@@ -73,63 +73,63 @@ public class MainTab extends JPanel implements IKlientHolder
 			}
 		}
 	}
-
-
+    
+    
 	MainTab()
 	{
-            _BazaKlientowDlg = new BazaKlientowDlg(m_mainFr, false, this);
-            _epp = new EntryPropPage(m_mainFr, true);
-            JMenuItem mi = new JMenuItem("Dodaj do bazy");
-            mi.addActionListener(new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        Klient k = new Klient();
-                        k.setNazwa(NazwaFirmy.getText());
-                        k.setNIP(Nip.getText());
-                        k.setMiasto(AdresFirmyMiasto.getText());
-                        k.setUlica(AdresFirmyUlica.getText());
-                        DBManager.getInstance().getKlienci().add(k);
-                        _BazaKlientowDlg.klientAdded();
-                    }
-                });
-            _BazaMenu.add(mi);
-            mi = new JMenuItem("Baza klient\u00F3w...");
-            mi.addActionListener(new ActionListener()
+        _BazaKlientowDlg = new BazaKlientowDlg(m_mainFr, false, this);
+        _epp = new EntryPropPage(m_mainFr, true);
+        JMenuItem mi = new JMenuItem("Dodaj do bazy");
+        mi.addActionListener(new ActionListener()
+                             {
+            public void actionPerformed(ActionEvent e)
             {
-                public void actionPerformed(ActionEvent e)
-                {
-                    _BazaKlientowDlg.setVisible(true);
-                }
-            });
-            _BazaMenu.add(mi);
-            Box bvMain = Box.createVerticalBox();
-            Box bv1 = Box.createHorizontalBox();
-            Box bv2 = Box.createHorizontalBox();
-            Box bv3 = Box.createHorizontalBox();
-            Box bv4 = Box.createHorizontalBox();
-            Box bv5 = Box.createHorizontalBox();
-            Box bv6 = Box.createHorizontalBox();
-            Box bv7 = Box.createHorizontalBox();
-            Box bv8 = Box.createHorizontalBox();
-            Box bv9 = Box.createHorizontalBox();
-            Box bv10 = Box.createHorizontalBox();
-            Box bv11 = Box.createHorizontalBox();
-
-            bv1.add(new JLabel("Nazwa firmy"));
-            bv1.add(Box.createHorizontalStrut(10));
-                bv1.add(NazwaFirmy);
-                bv1.add(Box.createHorizontalStrut(10));
-                _btBaza = new JButton("Baza...");
-                _btBaza.addActionListener(new ActionListener()
-                    {
-                        public void actionPerformed(ActionEvent e)
-                        {
-                            _BazaMenu.show(_btBaza, 0, _btBaza.getY());
-                        }
-                    });
-                bv1.add(_btBaza);
-                bv1.add(Box.createHorizontalStrut(10));
+                Klient k = new Klient();
+                k.setNazwa(NazwaFirmy.getText());
+                k.setNIP(Nip.getText());
+                k.setMiasto(AdresFirmyMiasto.getText());
+                k.setUlica(AdresFirmyUlica.getText());
+                DBManager.getInstance().getKlienci().add(k);
+                _BazaKlientowDlg.klientAdded();
+            }
+        });
+        _BazaMenu.add(mi);
+        mi = new JMenuItem("Baza klient\u00F3w...");
+        mi.addActionListener(new ActionListener()
+                             {
+            public void actionPerformed(ActionEvent e)
+            {
+                _BazaKlientowDlg.setVisible(true);
+            }
+        });
+        _BazaMenu.add(mi);
+        Box bvMain = Box.createVerticalBox();
+        Box bv1 = Box.createHorizontalBox();
+        Box bv2 = Box.createHorizontalBox();
+        Box bv3 = Box.createHorizontalBox();
+        Box bv4 = Box.createHorizontalBox();
+        Box bv5 = Box.createHorizontalBox();
+        Box bv6 = Box.createHorizontalBox();
+        Box bv7 = Box.createHorizontalBox();
+        Box bv8 = Box.createHorizontalBox();
+        Box bv9 = Box.createHorizontalBox();
+        Box bv10 = Box.createHorizontalBox();
+        Box bv11 = Box.createHorizontalBox();
+        
+        bv1.add(new JLabel("Nazwa firmy"));
+        bv1.add(Box.createHorizontalStrut(10));
+        bv1.add(NazwaFirmy);
+        bv1.add(Box.createHorizontalStrut(10));
+        _btBaza = new JButton("Baza...");
+        _btBaza.addActionListener(new ActionListener()
+                                  {
+            public void actionPerformed(ActionEvent e)
+            {
+                _BazaMenu.show(_btBaza, 0, _btBaza.getY());
+            }
+        });
+        bv1.add(_btBaza);
+        bv1.add(Box.createHorizontalStrut(10));
 		bv2.add(new JLabel("Adres firmy"));
 		bv3.add(new JLabel("Miasto"));
 		bv3.add(Box.createHorizontalStrut(10));
@@ -184,13 +184,13 @@ public class MainTab extends JPanel implements IKlientHolder
 		bv7.add(new JLabel("Lista towar\u00F3w do umieszczenia na fakturze"));
 		scrollPane.setPreferredSize(new Dimension(750, 130));
 		bv8.add(scrollPane);
-
+        
 		bv10.add(new JLabel("Uwagi"));
 		
 		JScrollPane UwagiScroll = new JScrollPane(Uwagi);
 		UwagiScroll.setPreferredSize(new Dimension(200, 80));
 		bv11.add(UwagiScroll);
-
+        
 		jbdodaj.addActionListener(new dodajAL());
 		jkasuj.addActionListener(new kasujAL());
 		bv9.add(jbdodaj);
@@ -216,7 +216,7 @@ public class MainTab extends JPanel implements IKlientHolder
 		bvMain.add(bv8);
 		bvMain.add(Box.createVerticalStrut(10));
 		bvMain.add(bv9);
-
+        
 		bvMain.add(Box.createVerticalStrut(30));
 		bvMain.add(bv10);
 		bvMain.add(Box.createVerticalStrut(5));
@@ -279,26 +279,26 @@ public class MainTab extends JPanel implements IKlientHolder
 		return rok;
 	}
 	
-        public void setKlientMiasto(String Miasto)
-        {
-            AdresFirmyMiasto.setText(Miasto);
-        }
-        
-        public void setKlientNIP(String NIP)
-        {
-            Nip.setText(NIP);
-        }
-        
-        public void setKlientNazwa(String Nazwa)
-        {
-            NazwaFirmy.setText(Nazwa);            
-        }
-        
-        public void setKlientUlica(String Ulica)
-        {
-            AdresFirmyUlica.setText(Ulica);
-        }
-        
+    public void setKlientMiasto(String Miasto)
+    {
+        AdresFirmyMiasto.setText(Miasto);
+    }
+    
+    public void setKlientNIP(String NIP)
+    {
+        Nip.setText(NIP);
+    }
+    
+    public void setKlientNazwa(String Nazwa)
+    {
+        NazwaFirmy.setText(Nazwa);
+    }
+    
+    public void setKlientUlica(String Ulica)
+    {
+        AdresFirmyUlica.setText(Ulica);
+    }
+    
 	private JButton jbdodaj = new JButton("Dodaj");
 	private JButton jkasuj = new JButton("Kasuj");
 	private ListOfArts loa = new ListOfArts();
@@ -315,10 +315,10 @@ public class MainTab extends JPanel implements IKlientHolder
 	private CopyPasteTextField Odbierajacy = new CopyPasteTextField(10);
 	private CopyPasteTextField MiejsceWystawienia = new CopyPasteTextField(10);
 	private JTextArea Uwagi = new JTextArea(3, 10);
-        private JPopupMenu _BazaMenu = new JPopupMenu();
-        private BazaKlientowDlg _BazaKlientowDlg;
-        private JButton _btBaza;
-        private EntryPropPage _epp;
-
+    private JPopupMenu _BazaMenu = new JPopupMenu();
+    private BazaKlientowDlg _BazaKlientowDlg;
+    private JButton _btBaza;
+    private EntryPropPage _epp;
+    
 };
 

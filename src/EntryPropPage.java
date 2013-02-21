@@ -29,19 +29,19 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
 					m_ok = true;
 				}
 				saveDialogPosition();
-                                setVisible(false);
-                                dispose();
+                setVisible(false);
+                dispose();
 			}
 		}
 	}
-       
-
+    
+    
 	EntryPropPage(Frame f, boolean b)
 	{
 		super(f, "Dane towaru / us\u0142ugi", b, new Rectangle(100, 200, 750, 150));
-                setResizable(false);
+        setResizable(false);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                _dlg = new BazaTowarowDlg(f, true, this);
+        _dlg = new BazaTowarowDlg(f, true, this);
 		Container cp;
 		m_fr = f;
 		cp = getContentPane();
@@ -82,43 +82,43 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
 		CancelButton.addActionListener(this);
 		cp.add(OKButton);
 		cp.add(CancelButton);
-                JMenuItem mi = new JMenuItem("Dodaj do bazy");
-                mi.addActionListener(new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        Towar t = new Towar();
-                        t.setNazwa(Tnazwa.getText());
-                        t.setJednostka((String)Tjednostka.getSelectedItem());
-                        t.setSWW(Tsww.getText());
-                        t.setVAT((String)Tvat.getSelectedItem());
-                        t.setCena(Tcena.getText());
-                        DBManager.getInstance().getTowary().add(t);
-                        _dlg.towarAdded();
-                    }
-                });
-                _Menu.add(mi);
-                mi = new JMenuItem("Baza towar\u00F3w...");
-                mi.addActionListener(new ActionListener()
-                {
-                    public void actionPerformed(ActionEvent e)
-                    {
-                        _dlg.setVisible(true);
-                    }
-                });
-                _Menu.add(mi);
-                
-                _MenuBt.addActionListener(new ActionListener()
-                    {
-                        public void actionPerformed(ActionEvent e)
-                        {
-                            _Menu.show(_MenuBt, 0, 0);
-                        }
-                    });
-                cp.add(_MenuBt);
+        JMenuItem mi = new JMenuItem("Dodaj do bazy");
+        mi.addActionListener(new ActionListener()
+                             {
+            public void actionPerformed(ActionEvent e)
+            {
+                Towar t = new Towar();
+                t.setNazwa(Tnazwa.getText());
+                t.setJednostka((String)Tjednostka.getSelectedItem());
+                t.setSWW(Tsww.getText());
+                t.setVAT((String)Tvat.getSelectedItem());
+                t.setCena(Tcena.getText());
+                DBManager.getInstance().getTowary().add(t);
+                _dlg.towarAdded();
+            }
+        });
+        _Menu.add(mi);
+        mi = new JMenuItem("Baza towar\u00F3w...");
+        mi.addActionListener(new ActionListener()
+                             {
+            public void actionPerformed(ActionEvent e)
+            {
+                _dlg.setVisible(true);
+            }
+        });
+        _Menu.add(mi);
+        
+        _MenuBt.addActionListener(new ActionListener()
+                                  {
+            public void actionPerformed(ActionEvent e)
+            {
+                _Menu.show(_MenuBt, 0, 0);
+            }
+        });
+        cp.add(_MenuBt);
 		transferFocus();
 	}
-
+    
 	public void sw()
 	{
 		setVisible(true);
@@ -146,48 +146,48 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
 		ret.recalculate();
 		return ret;
 	}
-        
-        
+    
+    
 	public void actionPerformed(ActionEvent e)
 	{
 		if (((JButton)e.getSource()) == OKButton)
 		{
 			m_ok = true;
 		}
-                saveDialogPosition();
+        saveDialogPosition();
 		setVisible(false);
-                dispose();
+        dispose();
 	}
 	public boolean isOk()
 	{
 		return m_ok;
 	}
 	
-        public void setCena(String Cena)
-        {
-            Tcena.setText(Cena);
-        }
-        
-        public void setJednostka(String Jednostka)
-        {
-            Tjednostka.setSelectedItem(Jednostka);
-        }
-        
-        public void setNazwa(String Nazwa)
-        {
-            Tnazwa.setText(Nazwa);
-        }
-        
-        public void setSWW(String SWW)
-        {
-            Tsww.setText(SWW);
-        }
-        
-        public void setVAT(String VAT)
-        {
-            Tvat.setSelectedItem(VAT);
-        }
-        
+    public void setCena(String Cena)
+    {
+        Tcena.setText(Cena);
+    }
+    
+    public void setJednostka(String Jednostka)
+    {
+        Tjednostka.setSelectedItem(Jednostka);
+    }
+    
+    public void setNazwa(String Nazwa)
+    {
+        Tnazwa.setText(Nazwa);
+    }
+    
+    public void setSWW(String SWW)
+    {
+        Tsww.setText(SWW);
+    }
+    
+    public void setVAT(String VAT)
+    {
+        Tvat.setSelectedItem(VAT);
+    }
+    
 	private CopyPasteTextField Tnazwa = new CopyPasteTextField(67);
 	private CopyPasteTextField Tilosc = new CopyPasteTextField(5);
 	private JComboBox Tjednostka = new JComboBox();
@@ -196,9 +196,9 @@ class EntryPropPage extends ResizableDialogBase implements ActionListener, ITowa
 	private JComboBox Tvat = new JComboBox();
 	private JButton OKButton = new JButton("OK");
 	private JButton CancelButton = new JButton("Anuluj");
-        private JButton _MenuBt = new JButton("Baza...");
+    private JButton _MenuBt = new JButton("Baza...");
 	private boolean m_ok = false;
 	private Frame m_fr = null;
-        private JPopupMenu _Menu = new JPopupMenu();
-        private BazaTowarowDlg _dlg;
+    private JPopupMenu _Menu = new JPopupMenu();
+    private BazaTowarowDlg _dlg;
 }

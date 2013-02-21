@@ -27,12 +27,12 @@ class Slownie
 		value = l;
 		makeString();
 	}
-
+    
 	public String getString()
 	{
 		return string;
 	}
-
+    
 	private void makeString()
 	{
 		if (value == 0)
@@ -48,11 +48,11 @@ class Slownie
 			th[t] = tmp % 1000;
 			tmp /= 1000;
 		}
-	
+        
 		for (t=3; t>=0; t--)
 		{
 			if (th[t] == 0)
-			continue;
+                continue;
 			if (th[t] == 1)
 			{
 				string += zer[t][0];

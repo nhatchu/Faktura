@@ -8,7 +8,7 @@ import java.awt.Rectangle;
 import java.util.prefs.Preferences;
 
 
-class Faktura extends JFrame 
+class Faktura extends JFrame
 {
 	private class tabCL implements ChangeListener
 	{
@@ -29,40 +29,40 @@ class Faktura extends JFrame
 	{
 		public void windowClosing(WindowEvent e)
 		{
-                    Rectangle rect;
-                    rect = e.getWindow().getBounds();
-                    Preferences prefs = Preferences.userNodeForPackage(e.getWindow().getClass());
-                    prefs = prefs.node("MainDlg");
-                    prefs.putInt("X", rect.x);
-                    prefs.putInt("Y", rect.y);
-                    prefs.putInt("Width", rect.width);
-                    prefs.putInt("Height", rect.height);
-		   
-                    try
-                    {
-                    	DaneWyst = DWTab.getDaneW();
-			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("dw.dat"));
-			out.writeObject(DaneWyst);
-			out.close();
-                    }
-                    catch(Exception ex)
-                    {
-                    	System.out.println("Nie mo\u017Cna zapisa\u0107 pliku z danymi wystawiaj\u0105cego");
-                    }
-                    DBManager.getInstance().saveData();
-                    System.exit(0);
-		}
-            public void windowOpened(WindowEvent e)
+            Rectangle rect;
+            rect = e.getWindow().getBounds();
+            Preferences prefs = Preferences.userNodeForPackage(e.getWindow().getClass());
+            prefs = prefs.node("MainDlg");
+            prefs.putInt("X", rect.x);
+            prefs.putInt("Y", rect.y);
+            prefs.putInt("Width", rect.width);
+            prefs.putInt("Height", rect.height);
+            
+            try
             {
-                Rectangle rect = new Rectangle();
-                Preferences prefs = Preferences.userNodeForPackage(e.getWindow().getClass());
-                prefs = prefs.node("MainDlg");
-                rect.x = prefs.getInt("X", 100);
-                rect.y = prefs.getInt("Y", 100);
-                rect.width = prefs.getInt("Width", 800);
-                rect.height = prefs.getInt("Height", 630);
-                e.getWindow().setBounds(rect);
+                DaneWyst = DWTab.getDaneW();
+                ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("dw.dat"));
+                out.writeObject(DaneWyst);
+                out.close();
             }
+            catch(Exception ex)
+            {
+                System.out.println("Nie mo\u017Cna zapisa\u0107 pliku z danymi wystawiaj\u0105cego");
+            }
+            DBManager.getInstance().saveData();
+            System.exit(0);
+		}
+        public void windowOpened(WindowEvent e)
+        {
+            Rectangle rect = new Rectangle();
+            Preferences prefs = Preferences.userNodeForPackage(e.getWindow().getClass());
+            prefs = prefs.node("MainDlg");
+            rect.x = prefs.getInt("X", 100);
+            rect.y = prefs.getInt("Y", 100);
+            rect.width = prefs.getInt("Width", 800);
+            rect.height = prefs.getInt("Height", 630);
+            e.getWindow().setBounds(rect);
+        }
 	}
 	
 	Faktura()
@@ -86,7 +86,7 @@ class Faktura extends JFrame
 			DaneWyst.setWystawiajacy("Nazwisko i imi\u0119 wystawiaj\u0105cego");
 		}
 		DWTab = new DaneWystTab(DaneWyst);
-
+        
 		jt.addTab("Edycja faktury", mt);
 		jt.addTab("Podgl\u0105d wydruku", pp);
 		jt.addTab("Faktury wystawione", fw);
@@ -103,8 +103,8 @@ class Faktura extends JFrame
 		jf.setResizable(false);
 		jf.setVisible(true);
   	}
-
-	public static void main(String[] args) 
+    
+	public static void main(String[] args)
 	{
 		Faktura fakt = new Faktura();
 		init(fakt);

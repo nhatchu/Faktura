@@ -20,25 +20,25 @@ class DaneWystTab extends JPanel
 		nazwa.setText(dw.getNazwa());
 		bx.add(nazwa);
 		bx.add(Box.createVerticalStrut(20));
-
+        
 		bx.add(new JLabel("Miasto"));
 		bx.add(Box.createVerticalStrut(10));
 		miasto.setText(dw.getMiasto());
 		bx.add(miasto);
 		bx.add(Box.createVerticalStrut(20));
-
+        
 		bx.add(new JLabel("Ulica"));
 		bx.add(Box.createVerticalStrut(10));
 		ulica.setText(dw.getUlica());
 		bx.add(ulica);
 		bx.add(Box.createVerticalStrut(20));
-
+        
 		bx.add(new JLabel("NIP"));
 		bx.add(Box.createVerticalStrut(10));
 		nip.setText(dw.getNip());
 		bx.add(nip);
 		bx.add(Box.createVerticalStrut(20));
-
+        
 		bx.add(new JLabel("Konto"));
 		bx.add(Box.createVerticalStrut(10));
 		konto.setText(dw.getKonto());

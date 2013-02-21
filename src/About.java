@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 class About extends JPanel
 {
-	public About() 
+	public About()
 	{
 		Box bvMain = Box.createVerticalBox();
 		Box bv = Box.createVerticalBox();

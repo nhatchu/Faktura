@@ -19,22 +19,22 @@ class CopyPasteTextField extends JTextField
 	protected void init()
 	{
 		m_copy.addActionListener(new ActionListener()
-			{
-				public void actionPerformed(ActionEvent e)
-				{
-					copy();
-				}
-			}
-		);
+                                 {
+            public void actionPerformed(ActionEvent e)
+            {
+                copy();
+            }
+        }
+                                 );
 		
 		m_paste.addActionListener(new ActionListener()
-			{
-				public void actionPerformed(ActionEvent e)
-				{
-					paste();
-				}
-			}
-		);
+                                  {
+            public void actionPerformed(ActionEvent e)
+            {
+                paste();
+            }
+        }
+                                  );
 		
 		m_menu.add(m_copy);
 		m_menu.add(m_paste);
@@ -43,15 +43,15 @@ class CopyPasteTextField extends JTextField
 	
 	class MenuML extends MouseAdapter
 	{
-    	public void mousePressed(MouseEvent e) 
+    	public void mousePressed(MouseEvent e)
     	{
       		showMenu(e);
     	}
-    	public void mouseReleased(MouseEvent e) 
+    	public void mouseReleased(MouseEvent e)
     	{
       		showMenu(e);
     	}
-    	private void showMenu(MouseEvent e) 
+    	private void showMenu(MouseEvent e)
     	{
       		if (e.isPopupTrigger())
       		{
@@ -68,7 +68,7 @@ class CopyPasteTextField extends JTextField
       			m_copy.setEnabled(enable);
       			
       			Transferable clipData = getToolkit().getSystemClipboard().getContents(CopyPasteTextField.this);
-      			try 
+      			try
       			{
         			String clipString = (String)clipData.getTransferData(DataFlavor.stringFlavor);
         			if (clipString.length() != 0)
@@ -79,8 +79,8 @@ class CopyPasteTextField extends JTextField
         			{
         				enable = false;
         			}
-      			} 
-      			catch(Exception ex) 
+      			}
+      			catch(Exception ex)
       			{
         			enable = false;
       			}

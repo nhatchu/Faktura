@@ -41,7 +41,7 @@ class Towar implements java.io.Serializable
     {
         _Cena = Cena;
     }
-        
+    
     private String _Nazwa = new String();
     private String _SWW = new String();
     private String _VAT = new String();

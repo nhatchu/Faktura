@@ -9,7 +9,7 @@ class DaneWystawiajacego implements Serializable
 	private String WNip = new String();
 	private String WKonto = new String();
 	private String WWystawiajacy = new String();
-
+    
 	public DaneWystawiajacego()
 	{
 	}
@@ -38,7 +38,7 @@ class DaneWystawiajacego implements Serializable
 	{
 		WWystawiajacy = nazwa;
 	}
-
+    
 	public String getNazwa()
 	{
 		return WNazwa;

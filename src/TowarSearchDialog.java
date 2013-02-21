@@ -7,8 +7,8 @@ import java.awt.Rectangle;
 
 class TowarSearchDialog extends ResizableDialogBase
 {
-   public TowarSearchDialog(java.awt.Frame parent, boolean modal, JTable table)
-   {
+    public TowarSearchDialog(java.awt.Frame parent, boolean modal, JTable table)
+    {
         super(parent, "Szukanie towaru", modal, new java.awt.Rectangle(0, 0, 300, 200));
         _Table = table;
         initComponents();
@@ -25,7 +25,7 @@ class TowarSearchDialog extends ResizableDialogBase
     private void initComponents()//GEN-BEGIN:initComponents
     {
         java.awt.GridBagConstraints gridBagConstraints;
-
+        
         _Nazwa = new javax.swing.JTextField();
         _Cena = new javax.swing.JTextField();
         _SWW = new javax.swing.JTextField();
@@ -34,17 +34,17 @@ class TowarSearchDialog extends ResizableDialogBase
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-
+        
         getContentPane().setLayout(new java.awt.GridBagLayout());
-
+        
         addWindowListener(new java.awt.event.WindowAdapter()
-        {
+                          {
             public void windowClosing(java.awt.event.WindowEvent evt)
             {
                 closeDialog(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -53,7 +53,7 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(_Nazwa, gridBagConstraints);
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
@@ -62,7 +62,7 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(_Cena, gridBagConstraints);
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
@@ -71,16 +71,16 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(_SWW, gridBagConstraints);
-
+        
         jbSzukaj.setText("Szukaj");
         jbSzukaj.addActionListener(new java.awt.event.ActionListener()
-        {
+                                   {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jbSzukajActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
@@ -88,16 +88,16 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(jbSzukaj, gridBagConstraints);
-
+        
         jbCancel.setText("Zamknij");
         jbCancel.addActionListener(new java.awt.event.ActionListener()
-        {
+                                   {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
                 jbCancelActionPerformed(evt);
             }
         });
-
+        
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -105,14 +105,14 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         getContentPane().add(jbCancel, gridBagConstraints);
-
+        
         jLabel1.setText("Nazwa");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTHWEST;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jLabel1, gridBagConstraints);
-
+        
         jLabel2.setText("PKWiU");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -121,7 +121,7 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jLabel2, gridBagConstraints);
-
+        
         jLabel3.setText("Cena");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -130,15 +130,15 @@ class TowarSearchDialog extends ResizableDialogBase
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 10.0;
         getContentPane().add(jLabel3, gridBagConstraints);
-
+        
     }//GEN-END:initComponents
-
+    
     private void jbCancelActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jbCancelActionPerformed
     {//GEN-HEADEREND:event_jbCancelActionPerformed
         saveDialogPosition();
         closeDialog(null);
     }//GEN-LAST:event_jbCancelActionPerformed
-
+    
     private void jbSzukajActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jbSzukajActionPerformed
     {//GEN-HEADEREND:event_jbSzukajActionPerformed
         szukaj();
@@ -174,7 +174,7 @@ class TowarSearchDialog extends ResizableDialogBase
     
     private void szukaj()
     {
-       int pos = searchForIdx(_Nazwa.getText(), _SWW.getText(), _Cena.getText(), _Table.getSelectedRow());
+        int pos = searchForIdx(_Nazwa.getText(), _SWW.getText(), _Cena.getText(), _Table.getSelectedRow());
         if (pos != -1)
         {
             _Table.setRowSelectionInterval(pos, pos);
@@ -197,7 +197,7 @@ class TowarSearchDialog extends ResizableDialogBase
             szukaj();
         }
     }
- 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField _Cena;
     private javax.swing.JTextField _Nazwa;

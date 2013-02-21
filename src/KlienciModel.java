@@ -15,7 +15,7 @@ class KlienciModel extends javax.swing.table.DefaultTableModel
         Klient k = (Klient)DBManager.getInstance().getKlienci().get(rowIndex);
         switch (columnIndex)
         {
-            case 0: return k.getNazwa(); 
+            case 0: return k.getNazwa();
             case 1: return k.getMiasto();
             case 2: return k.getUlica();
             case 3: return k.getNIP();

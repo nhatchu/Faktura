@@ -5,7 +5,7 @@ import java.awt.event.*;
 import java.awt.image.*;
 import java.io.*;
 
-class PrintPreview extends JPanel 
+class PrintPreview extends JPanel
 {
 	class printAL implements ActionListener
 	{
@@ -14,14 +14,14 @@ class PrintPreview extends JPanel
 			prn.print();
 		}
 	}
-
+    
 	class saveAL implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e)
 		{
 			try
 			{
-				String nazwa = JOptionPane.showInputDialog(null, "Podaj nazw\u015B pliku", "Zapisywanie faktury", JOptionPane.QUESTION_MESSAGE); 
+				String nazwa = JOptionPane.showInputDialog(null, "Podaj nazw\u015B pliku", "Zapisywanie faktury", JOptionPane.QUESTION_MESSAGE);
 				if ( (nazwa == null) || (nazwa.length() < 1))
 				{
 					return;
@@ -42,10 +42,10 @@ class PrintPreview extends JPanel
 	public PrintPreview(MainTab mt)
 	{
 		m_mt = mt;
-                jbprint.addActionListener(new printAL());
-                jbsave.addActionListener(new saveAL());
+        jbprint.addActionListener(new printAL());
+        jbsave.addActionListener(new saveAL());
 	}
-
+    
 	
 	public void refreshPreview()
 	{
@@ -71,7 +71,7 @@ class PrintPreview extends JPanel
 		bvMain.add(bvButt);
 		add(bvMain);
 		m_bv = bvMain;
-            
+        
 	}
 	
 	private Box m_bv = null;

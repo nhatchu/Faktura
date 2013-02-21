@@ -5,7 +5,7 @@ import java.awt.event.*;
 import javax.swing.event.*;
 import java.io.*;
 
-class FakturyWystawione extends JPanel 
+class FakturyWystawione extends JPanel
 {
 	private class FnFilter implements FilenameFilter
 	{
@@ -33,13 +33,13 @@ class FakturyWystawione extends JPanel
 				return;
 			}
 			String[] options = { "OK", "Anuluj" };
-			int res = JOptionPane.showOptionDialog(null, "Skasowa\u0107 " + sel, "Kasowanie faktury", 
-			JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
+			int res = JOptionPane.showOptionDialog(null, "Skasowa\u0107 " + sel, "Kasowanie faktury",
+                                                   JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);
 			if (res != 0)
 			{
 				return;
 			}
-
+            
 			File f = new File(sel);
 			if (f.delete())
 			{
@@ -54,7 +54,7 @@ class FakturyWystawione extends JPanel
 			}
 		}
 	}
-
+    
 	private class loadAL implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e)
@@ -98,8 +98,8 @@ class FakturyWystawione extends JPanel
 			}
 		}
 	}
-
-	public FakturyWystawione(Faktura fakt) 
+    
+	public FakturyWystawione(Faktura fakt)
 	{
 		m_f = fakt;
 		String[] fl;

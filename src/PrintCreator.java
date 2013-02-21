@@ -5,7 +5,7 @@ import java.awt.print.*;
 import java.awt.image.*;
 import java.util.*;
 
-class PrintCreator extends AbstractPrintCreator 
+class PrintCreator extends AbstractPrintCreator
 {
 	private class VatEntry
 	{
@@ -13,12 +13,12 @@ class PrintCreator extends AbstractPrintCreator
 		public String WBrutto = new String();
 		public String Vat = new String();
 	}
-
+    
 	PrintCreator()
 	{
 		TableX = new Integer[DataModel.ColumnsTitles.length + 1];
 	}
-		
+    
 	protected void drawResult(Graphics g)
 	{
 		String Razem;
@@ -67,7 +67,7 @@ class PrintCreator extends AbstractPrintCreator
 		g.setFont(ArialBig);
 		g.drawString("Sprzedawca :", 80, 170);
 		g.drawString("Nabywca :", 80, 230);
-
+        
 		g.setFont(newRomanNormal);
 		if (dw != null)
 		{
@@ -76,13 +76,13 @@ class PrintCreator extends AbstractPrintCreator
 			g.drawString(dw.getUlica(), 90, 205);
 			g.drawString("NIP : " + dw.getNip(), 90, 215);
 		}
-
+        
 		g.drawString(m_fd.getNazwaFirmy(), 90, 245);
 		g.drawString(m_fd.getAdresFirmyMiasto(), 90, 255);
 		g.drawString(m_fd.getAdresFirmyUlica(), 90, 265);
 		g.drawString("NIP : " + m_fd.getNip(), 90, 275);
-
-
+        
+        
 		g.setFont(newRomanSmall);
 		g.drawString("Imi\u015B i nazwisko osoby", 117, maxYVisible - 80);
 		g.drawString("upowa\u017Cnionej do wystawienia faktury VAT", 80, maxYVisible - 70);
@@ -94,7 +94,7 @@ class PrintCreator extends AbstractPrintCreator
 			g.drawString(dw.getWystawiajacy(), 117, maxYVisible - 10);
 		}
 		g.drawString(m_fd.getOdbierajacy(), maxXVisible - 115, maxYVisible - 10);
-
+        
 	}
 	
 	private void drawTableHeader(Graphics g)
@@ -108,7 +108,7 @@ class PrintCreator extends AbstractPrintCreator
 		g.setFont(newRomanNormal);
 		
 		g.drawString(DataModel.ColumnsTitles[0], 82, 312);
-		g.drawLine(95, 300, 95, 315); 
+		g.drawLine(95, 300, 95, 315);
 		TableX[1] = new Integer(95);
 		g.drawString(DataModel.ColumnsTitles[1], 97, 312);
 		g.drawLine(215, 300, 215, 315);//240
@@ -121,35 +121,35 @@ class PrintCreator extends AbstractPrintCreator
 		dx += 2;
 		g.drawLine(dx, 300, dx, 315);
 		TableX[3] = new Integer(dx);
-	
+        
 		dx += 2;
 		g.drawString(DataModel.ColumnsTitles[3], dx, 312);
 		dx += g.getFontMetrics().stringWidth(DataModel.ColumnsTitles[3]);
 		dx += 2;
 		g.drawLine(dx, 300, dx, 315);
 		TableX[4] = new Integer(dx);
-
+        
 		dx += 2;
 		g.drawString(DataModel.ColumnsTitles[4], dx, 312);
 		dx += g.getFontMetrics().stringWidth(DataModel.ColumnsTitles[4]);
 		dx += 2;
 		g.drawLine(dx, 300, dx, 315);
 		TableX[5] = new Integer(dx);
-
+        
 		dx += 2;
 		g.drawString(DataModel.ColumnsTitles[5], dx, 312);
 		dx += g.getFontMetrics().stringWidth(DataModel.ColumnsTitles[5]);
 		dx += 2;
 		g.drawLine(dx, 300, dx, 315);
 		TableX[6] = new Integer(dx);
-
+        
 		dx += 2;
 		g.drawString(DataModel.ColumnsTitles[6], dx, 312);
 		dx += g.getFontMetrics().stringWidth(DataModel.ColumnsTitles[6]);
 		dx += 17;
 		g.drawLine(dx, 300, dx, 315);
 		TableX[7] = new Integer(dx);
-
+        
 		dx += 2;
 		g.drawString(DataModel.ColumnsTitles[7], dx, 312);
 		dx += g.getFontMetrics().stringWidth(DataModel.ColumnsTitles[7]);
@@ -215,7 +215,7 @@ class PrintCreator extends AbstractPrintCreator
 			g.drawString(txt, from + 2, TableY - 3);
 		}
 	}
-
+    
 	private boolean drawNazwa(Graphics g, final String txts, int from, int to)
 	{
 		String txt = new String(txts);
@@ -308,19 +308,19 @@ class PrintCreator extends AbstractPrintCreator
 				sum = sum.add(new java.math.BigDecimal(translator).setScale(2, java.math.BigDecimal.ROUND_HALF_UP));
 			}
 			/*
-			ret = "" + sum;
-			ret = DataEntry.rd(ret);
-			if (ret.charAt(ret.length() - 1) == '.')
-			{
-				ret += "00";
-				return ret;
-			}
-			if (ret.charAt(ret.length() - 2) == '.')
-			{
-				ret += "0";
-				return ret;
-			}
-			*/
+             ret = "" + sum;
+             ret = DataEntry.rd(ret);
+             if (ret.charAt(ret.length() - 1) == '.')
+             {
+             ret += "00";
+             return ret;
+             }
+             if (ret.charAt(ret.length() - 2) == '.')
+             {
+             ret += "0";
+             return ret;
+             }
+             */
 			return sum.toString();
 		}
 		catch(NumberFormatException e) {
@@ -346,7 +346,7 @@ class PrintCreator extends AbstractPrintCreator
 		double sumNetto = 0;
 		double sumBrutto = 0;
 		double sumVat = 0;
-
+        
 		for (int i = 0; i < al.size() ; i++)
 		{
 			DataEntry dat = (DataEntry)al.get(i);
@@ -362,23 +362,23 @@ class PrintCreator extends AbstractPrintCreator
 					Double dWNetto = new Double(ve.WNetto);
 					Double dWBrutto = new Double(ve.WBrutto);
 					Double dVatKwota = new Double(0);
-                                        try
-                                        {
-                                            dVatKwota = new Double(ve.Vat);
-                                        }
-                                        catch (NumberFormatException e)
-                                        {
-                                        }
+                    try
+                    {
+                        dVatKwota = new Double(ve.Vat);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
 					
 					Double vk = new Double(0);
-                                        try
-                                        {
-                                            vk = new Double(VatKwota);
-                                        }
-                                        catch (NumberFormatException e)
-                                        {
-                                        }
-                                        
+                    try
+                    {
+                        vk = new Double(VatKwota);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
+                    
 					Double wn = new Double(WNetto);
 					Double wb = new Double(WBrutto);
 					
@@ -387,7 +387,7 @@ class PrintCreator extends AbstractPrintCreator
 					sumVat += vk.doubleValue();
 					
 					VatEntry newEntry = new VatEntry();
-
+                    
 					newEntry.WNetto = "" + (dWNetto.doubleValue() + wn.doubleValue());
 					newEntry.WBrutto = "" + (dWBrutto.doubleValue() + wb.doubleValue());
 					newEntry.Vat = "" + (dVatKwota.doubleValue() + vk.doubleValue());
@@ -407,13 +407,13 @@ class PrintCreator extends AbstractPrintCreator
 				try
 				{
 					Double vk = new Double(0);
-                                        try
-                                        {
-                                            vk = new Double(VatKwota);
-                                        }
-                                        catch (NumberFormatException e)
-                                        {
-                                        }
+                    try
+                    {
+                        vk = new Double(VatKwota);
+                    }
+                    catch (NumberFormatException e)
+                    {
+                    }
 					Double wn = new Double(WNetto);
 					Double wb = new Double(WBrutto);
 					
@@ -440,7 +440,7 @@ class PrintCreator extends AbstractPrintCreator
 			DataEntry dat = (DataEntry)al.get(k);
 			VatEntry v = new VatEntry();
 			if (VatMap.containsKey(dat.getVatStawka()))
-			{			
+			{
 				v = (VatEntry)VatMap.get(dat.getVatStawka());
 				g.drawString(DataEntry.rd(dat.getVatStawka()), 300, TableY);
 				g.drawString(DataEntry.rd(v.WNetto), 350, TableY);
@@ -455,7 +455,7 @@ class PrintCreator extends AbstractPrintCreator
 		g.drawString(DataEntry.rd("" + sumNetto), 350, TableY);
 		g.drawString(DataEntry.rd("" + sumBrutto), 400, TableY);
 		g.drawString(DataEntry.rd("" + sumVat), 450, TableY);
-
+        
 	}
 	
 	private void drawSlownie(Graphics g, final String razem)
