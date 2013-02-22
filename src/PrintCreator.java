@@ -54,10 +54,10 @@ class PrintCreator extends AbstractPrintCreator
 		g.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		g.drawString("ORYGINA\u0141 / KOPIA", xPageSize / 2 - 70, 110);
 		g.setFont(newRomanNormal);
-		g.drawString("Nr faktury :", xPageSize / 2 + 35, 140);
-		g.drawString("Data wystawienia :", xPageSize / 2 + 35, 150);
-		g.drawString("Data sprzeda\u017Cy :", xPageSize / 2 + 35, 160);
-		g.drawString("Miejsce wystawienia :", xPageSize / 2 + 35, 170);
+		g.drawString("Nr faktury :", xPageSize / 2 + 20, 140);
+		g.drawString("Data wystawienia :", xPageSize / 2 + 20, 150);
+		g.drawString("Data wykonania us\u0142ugi :", xPageSize / 2 + 20, 160);
+		g.drawString("Miejsce wystawienia :", xPageSize / 2 + 20, 170);
 		
 		g.drawString(m_fd.getNumerFakt(), xPageSize / 2 + 125, 140);
 		g.drawString(m_fd.getDataWyst(), xPageSize / 2 + 125, 150);

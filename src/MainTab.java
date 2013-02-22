@@ -146,7 +146,7 @@ public class MainTab extends JPanel implements IKlientHolder
 		bv4.add(Box.createHorizontalStrut(10));
 		bv4.add(DataWyst);
 		bv4.add(Box.createHorizontalStrut(10));
-		bv4.add(new JLabel("Data sprzeda\u017Cy"));
+		bv4.add(new JLabel("Data wykonania us\u0142ugi"));
 		bv4.add(Box.createHorizontalStrut(10));
 		DataSprze.addFocusListener(new dataFL());
 		bv4.add(DataSprze);
